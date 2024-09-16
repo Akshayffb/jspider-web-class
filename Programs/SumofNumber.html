@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of number</title>
+</head>
+<body>
+
+    <button onclick="Sumof()">Sum of</button>
+    
+    <script>
+        var c = console.log.bind(document)
+        function Sumof(){
+            var num = [2,2,3]
+            var sum =0;
+            for(let i=0; i<=num.length-1; i++){
+                sum += num[i]
+            }
+            document.write(sum)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        .sec{
+            background-color: antiquewhite;
+            width: 50%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #btn{
+            display: block;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sec">
+    <h1 id="change">Change Quotes</h1>
+</div>
+    <button id="btn">Click</button>
+
+
+    <script>
+        let sec= document.querySelector(".sec");
+        let cod=document.getElementById("btn");
+        cod.addEventListener("click" , ()=>{
+    let color ="#";
+    let colorchar ="0123456789abcdef"
+    for(let i=0; i<6; i++)
+    {
+       let randomnumber = Math.trunc(Math.random()*16);
+        color += colorchar[randomnumber];
+        sec.style.backgroundColor = color;
+        // cod_display.innerText =color
+    }
+
+    let Quotes = ['hi', 'hello', 'My name is khan', 'World is enemy'];
+    let changing=document.getElementById("change")
+    let randomNumber = Math.trunc(Math.random()*4)
+        changing.innerHTML = Quotes[randomNumber];
+    })
+    </script>
+</body>
+</html>

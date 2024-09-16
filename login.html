@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <title>Login</title>
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        .msg{
+            display: none;
+            color: red;
+        }
+
+        form{
+            background-color: #000;
+            width: 200px;
+            height: 220px;
+            color: #fff;
+            padding: 20px;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: inset 1px 1px 10px #fff;
+        }
+
+        input,button{
+            display: block;
+            margin: auto;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #eyes{
+            position: absolute;
+            top: 0px;
+            right: 12px;
+            border: none;
+            background-color: transparent;
+            height: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validate(event)">
+        <input type="text" name="user" id="un" placeholder="Enter username"> <br>
+        <small class="msg">username required</small> <br>
+
+        <div style="position: relative;">
+        <input type="password" name="pass" id="pw" placeholder="Enter the password"> <br>
+        <small class="msg">Password required</small>
+        <button onclick="eye()" type="button" id="eyes"><i style="color: #000;" class="fa-solid fa-eye"></i></button>
+    </div>
+        <input type="submit"></input>
+    </form>
+
+
+    <script>
+        var msgg = document.getElementsByClassName("msg")
+        let validate = (e) =>{
+            let username = e.target.user.value;
+            let password = e.target.pass.value;
+            if(username === ""){
+                msgg[0].style.display = "block"
+                return false
+            }
+            else if(password === "")
+            {
+                msgg[1].style.display = "block"
+                return false
+            }
+        }
+
+
+
+        let inputpassword = document.getElementById("pw")
+        let eyeElement = document.getElementById("eyes")
+        function eye(){
+            if(inputpassword.type === "password"){
+                inputpassword.type = "text";
+                eyeElement.innerHTML = '<i class= "fa-solid fa-eye-slash"></i>'
+            }else{
+                inputpassword.type === "password"
+                inputpassword.type = "text";
+
+                eyeElement.innerHTML = '<i class = "fa-solid fa-eye"></i>'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tt{
+            position: relative;
+            /* height: 50px; */
+            /* background:red; */
+  max-height:225px;  /*height to show an exact number of spans  - in this case span is 45px (40 height plus 5 margin as margins collapse) and we are showing 5 spans to start */
+  float:left;
+  width: 50px;
+  height:25px;
+  overflow:hidden;
+  overflow-y:auto;
+        }
+
+        .card{
+            position:absolute;
+	top:0;
+  	animation: scroll 10s linear 1s infinite;
+        }
+
+
+        span {
+  min-width:290px;
+  min-height:40px;
+  display:block;
+  /* color:white; */
+  /* margin:5px; */
+  /* background:blue; */
+}
+
+@keyframes scroll {
+    100% {
+        top: -360px;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Trying</h1>
+    <p>boolean, null, undefined, number, string, symbol object bigint</p>
+
+    <div class="tt">
+        <div class="card">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+    </div>
+
+    <script>
+        var c =console.log.bind(document)
+        var gg;
+        let gh;
+        gh=11;
+        console.log(gg)
+        let x = 16 + "Volvo";
+        c(x)
+
+        gg=50;
+
+        c(gh)
+
+
+        const j=10;
+
+        // var b = Number(prompt('Enter the age'));
+        var b = 31;
+
+        var res = (b >=30 ? 'pass': 'fail')
+        c(res)
+
+
+        var stu = {
+            fname : 'Akshay',
+            lname : 'Kumar',
+            age : 24
+        }
+        c(stu.age, stu.fname, stu.lname)
+
+
+
+        //for in loop
+     for(let b in stu){
+        c(`${b} = ${stu[b]}`)
+     }
+
+
+     var student = {
+        name : 'hgh',
+        last : 'fd',
+        age : 25
+     }
+
+
+     //for in loop
+     for(let i in student){
+        c(i +' == '+student[i])
+     }
+
+
+     var tttt = {
+        sex : 'M',
+        age : 25
+     }
+
+     //for of loop
+     var dd = [2,6,7,9,]
+        dd = 'Code'
+     for(let d of dd){
+        c(d)
+     }
+
+
+     var nnnnnnnn = ['dfghjdd', 'fdsgdh', 'dfghj', 'sdfgh']
+     var llllll = {
+        skdfj : '521',
+        kgh : 35
+     }
+     for (const key of nnnnnnnn) {
+        c(key)
+     }
+
+
+     for(let k in nnnnnnnn){
+        c(k+ ' ' +nnnnnnnn[k])
+     }
+
+
+     for (let l in llllll){
+        c(l +' '+llllll[l])
+     }
+
+
+     //function 
+     var h = function names(a){
+        return a+b;
+     }
+     c(h(1,5))
+
+
+
+
+     //general
+     function gen(a,b){
+        return a-b;
+     }
+     c(gen(75,66))
+
+
+     //annonymous function
+
+     var ann = function (a,b){
+        return a/b;
+     }
+     c(ann(50,2))
+
+
+
+     //arrow
+
+     var arr = (a,b) =>{
+       return a*b;
+     }
+     c(arr(32,5))
+
+
+
+     //Self invoking
+
+    //  (function (){
+    //     console.log("I'm Self Invoking function");
+    // }())
+
+    var self = (function (b,n){
+        return b+n
+     }(3,6))
+     
+     c(self)
+
+
+
+
+
+     //object creation using literals { }
+    //  var strrrr = prompt('Enter the name');
+    //  var many = {
+    //     name : strrrr,
+    //     age : 25
+    //  }
+
+    //  c(many.name)
+
+     //object creation using class and constructor
+
+
+    //  var name = prompt('Enter name')
+    //  var age = prompt('Enter age')
+    //  class Person
+    //                                 {
+    //                                     constructor(firstName , lastName){
+    //                                     this.firstName=firstName;
+    //                                     this.lastName=lastName;
+    //                                                         }
+
+    //                                     fullname(){
+    //                                                 return this.firstName + " " +this.lastName;
+    //                                                }
+    //                                 }
+
+    //                                 let Person1 = new Person(name, age);
+    //                                 document.write(Person1);
+    //                                 document.write(Person1.fullname());
+
+
+    
+
+    // class Akshay {
+
+    //     constructor(fullnam, nullage){
+    //         this.fullnam=fullnam;
+    //         this.nullage = nullage;
+    //     }
+    //     fun(){
+    //         return this.fullnam + ' '+this.nullage
+    //     }
+       
+
+    // }
+    // var varr = new Akshay(name, age);
+    //     document.write(varr)
+    //     document.write(varr.fullnam)
+    //     document.write(varr.nullage)
+
+
+//object creation using instance of
+    var obj = new Object();
+    c(obj)
+    obj.name='akshay';
+    obj.age = 25
+    c(obj)
+    obj.name = 'Kumar'
+    c(obj.name)
+    c(obj)
+
+
+
+    //string
+
+    // var fruit=`apple`
+    //                                     console.log(fruit[0]);
+    //                                     console.log(fruit[4]);
+    //                                     c(fruit[5]);
+
+
+                                        var fruit=`apple`;
+                                        for(let i=0;i<fruit.length;i++){
+                                            // console.log(i);		
+                                            // console.log(fruit);
+                                            console.log(fruit[i]);
+                                        }
+
+                                        
+
+    //slice
+    // let text = "Apple";
+// let part = text.slice(1,4);
+// c(part)// it takes/ includes the first position but exclude the las postion 
+
+
+    //substring
+    var sxx = 'Apple'
+    var strore = sxx.substring(4,2)
+    c(strore)
+
+
+    let numb = '5';
+// let text = numb.toString();
+let padded = numb.padStart(5,"0");
+c(padded)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a string</title>
+</head>
+<body>
+
+    <button onclick="revStr()"> Click </button>
+
+    <script>
+    
+        var str = 'Akshay is my name'
+    var st = ' ';
+    for(let i=str.length-1; i>=0; i--)
+    st += str[i]
+    Document.write(st);
+    </script>
+
+    <script>
+        function revStr(){
+            let str = prompt('enetr the String')
+            let revStr = ' ';
+            for(let i=str.length-1; i>=0; i--){
+                revStr +=str[i]
+            }
+            document.write(revStr)
+        }
+
+
+    </script>
+
+
+    
+</body>
+</html>

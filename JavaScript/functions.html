@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <h2 onclick="p()">Annonymous function</h2> <br>
+    <script>
+            let p=function(x,y)
+    {
+        return x*y;
+    }
+    console.log(p(4,2));
+    </script>
+
+
+<h2>Arrow function</h2>
+
+<script>
+    let c= (a,b) =>
+    {
+        return a+b;
+    }
+    console.log(c(2,4));
+
+</script>
+
+<h2>Self Invoking function</h2>
+<p>it is always with general , arrow function</p>
+<script>
+    (function p()
+    {
+        console.log("Im Self Invoking function with general function");
+    }() //() is used to invoke function
+    )
+</script>
+
+
+<script>
+    let r= ( () =>{
+    console.log("i'm self invoking function with arrow function");
+    }
+    )
+    console.log(r());
+</script>
+
+<script>
+    let rsult=(function(x,y){
+        return x+y;
+    }(2,4))
+    console.log(rsult);
+</script>
+
+<script>
+    x=10;
+    console.log(x);
+    var x;
+</script>
+
+<script>
+    let call = x => x;
+    document.write(call(2));
+</script>
+    
+</body>
+</html>

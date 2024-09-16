@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="time-display"></h1>
+
+    <script>
+
+        let timeDisplayElement = document.getElementById("time-display")
+        timeDisplayElement.style.cssText = "text-align: center;"
+        function datefn(){
+            let date = new Date()
+            timeDisplayElement.innerText = date.toLocaleTimeString();
+        }
+
+        setInterval(datefn, 0)
+    </script>
+
+
+</body>
+</html>

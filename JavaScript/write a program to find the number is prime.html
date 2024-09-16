@@ -1,0 +1,45 @@
+write a program to find the number is prime or not
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let b=window.prompt("Enter the number");
+        if(b%2==0)
+        {
+            window.alert(b+" It is prime number");
+        }
+        else
+        window.alert("not a prime");
+
+    </script> -->
+
+    <script>
+        let count=0;
+        let n;
+        n=prompt("Enter the number");
+        n=parseInt(n);
+
+        for(let i=1; i<n; i++)
+        {
+            if(n%i === 2)
+            {
+                count++;
+            }
+        }
+        if(count === 2)
+        {
+            window.alert("Prime");
+        }
+        else
+        window.alert("Not a prime");
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1389 @@
+Syllabus
+
+Module 1.
+
+1.	Introduction.
+2.	Keywords and Variables.
+3.	Datatypes.
+4.	Operators.(==,===)
+5.	Control Statements.
+
+imp questions:
+
+1.what is javaScript?
+2.what is the current version of js?
+3.what is the difference b/w java and js.
+4.what is the difference b/w js and ecma script.
+5.what is the difference b/w var, let and const.
+6.what is undefined/what is the default value of a variable?
+7.what are the different types use in js?
+8.what is the difference b/w Null and Undefined?
+9.what is type of operator/hoe\w to check the datatype of a variable?
+10.what is the difference b/w === vs ==?
+11.Working of ternary operator with example?
+12.what are control Statements and types?
+13.what is the difference b/w for in and for of?
+14.what is the difference b/w dowhile and while?
+
+Module 2.
+
+6.	Functions.
+7.	Objects.
+8.	Hoisting.
+9.	Arrays and Methods.
+10.	Strings and Methods.
+11.	POP up's.
+12.	Event Handlers.
+13.	DOM(Document Object Model).
+14.	Validations(Form Validations).
+
+Module 3.
+
+15.	Inheritence.	
+16.	Constructors.
+17.	Destructuring of Array's and objects.
+18.	Spread and Rest Operators.
+19.	Call Backs, Promises
+20.	Fetch API's.(Application programming Interface)
+
+
+
+
+java:
+
+1.oops language
+2.platform independent
+3.secure and rhobust.
+4.compiler and interpreter
+5.Backend programming language
+6.uses JDk
+7.Strictly typed in nature.
+
+java script:
+
+1.partially OOPs language.
+2.platform Independent.
+3.Secure and rhobust.
+4.interpreter.
+5.Frontend and Backend PL.
+6.uses JavaScript Engine.
+7.loosely typed in nature.
+
+
+
+
+control Statements:
+
+ Control statements are used to control the flow of the statements,there are two types of c.statements.
+
+1.Branching/Conditional:
+
+	if
+	ifelse
+	ifelseif
+	nested if
+	switch case
+
+2.Looping Statements:
+
+	for
+	While
+	doWhile
+	for in
+	for of
+
+
+-----------------
+Types of Printing Statements
+
+1.document.write("webpage")
+2.console.log("webpage")			//ctrl+shift+i
+3.alert("popupbox")
+
+
+module 2:
+
+Functions:
+
+Functions are the block of code or set of instructions to perform a Specific task.
+To Declare functions in Js we use function keyword.
+Functions will have parameters which will not be declared with the datatypes.
+The code return inside the function will be executed only when you call the function with the function name and invoke it.
+js functions donot have  returntype,basically they can return any type of data.
+Function Arguments usually should be equal to the Number of parameters,
+
+Naming Convention:
+one word function names = all lowercase.
+multiword function name = camelCase.
+
+
+Syntax:
+
+ function functionname(parameters){
+                code to execute
+            }
+
+            function calling functionName(arguments)
+
+example:
+
+function addnumbers(a,b){
+	return a+b
+}
+clg(addnumbers(1,2))
+
+
+Types of functions:
+
+1.General/Named/Normal Functions.
+2.Annonymous functions.
+3.Arrow function.
+4.Self invoking function/immediately invoking function.
+5.Call back function.
+
+
+General/Named/Normal Function:
+-----------------------------
+
+syntax:
+
+function functionName(parameters){
+	code to execute
+}
+function calling:functionName(argument)
+
+
+example:
+
+function Product(x,y){
+	return x*y
+}
+clg(Product(2,4))
+
+
+Annonymous function:
+-------------------
+
+will not have an identifier or a name.
+if we need to call the function we need an identifier or a name so we will store a annonymous function in a variable.
+Variable will act as identifier or name of the function.
+
+syntax:
+
+Variable = function(parameter){
+code to execute
+}
+function calling:variable(argument)
+
+example:
+
+let product = function(x,y){
+return x*y
+}
+clg(product(2,3))
+
+Arrow Function.
+
+Arrow functions will not have identifier or a name , just like annonymous functions.
+To declare arrow Functions we will not use function keyword instead of that we use arrow symbol(=>).
+
+syntax:
+
+variable=(parameters)=>{
+code to execute
+}
+
+function calling :variable(argument)
+
+
+example:
+
+let product = (x,y)=>{
+return x*y
+}
+clg(product(2,3))
+
+
+Self invoking function/IIF's:
+
+These functions should be writtten inside the paranthesis.
+These functions don't need an identifier/function name to get called they will  invoke themselves as soon as the function statement ends.
+
+syntax:
+
+(function(parameters){
+code to execute
+}(arguments)
+)
+
+example:
+
+(function(){
+clg(iam IIF")
+}())
+
+let result = (function(x,y){
+return x*y
+}(2,3))
+clg(result)
+//Note: variable is just to get the returned output from the IIF, not to call the function.
+//Note: Semicolon is mandatory to terminate the previous code before writing immediately invoking /self invoking functions.
+
+Hoisting:
+It is the default behaviour of JS to move all the declarations to the top of the scope prior to the execution by the interpreter.
+
+There are 3 types of hoisting.
+
+1.Variable Hoisting:
+	It is possible only with var keyword, where the declarations will move to the top of the scope.
+	To avoid variable hoisting we can use let and const keywords to declare the variables.
+
+	variable hoisting.
+
+				x=10
+				clg()
+				var x
+	
+2.Function Hoisting.
+	It is possible only with a function declaration such as General/Named Function.
+	It is not possible with function initializations or function Expressions such as Arrow and annonymous functions.also self invoking.
+
+	function hoisting.
+
+			1.	call()
+				function call(){
+				clg("calling")
+				} 
+
+			
+			2.	console.log(call(3,2));
+				function call(x,y){
+   				console.log("calling");
+   				return x+y
+3.Class Hoisting.
+
+		Example:
+
+
+
+
+
+Arrow Functions:
+
+Different behaviour of arrow function syntax:
+
+1:	When the arrow function is having one/single parameter paranthesis() is not mandatory,
+		
+	Example:
+		
+		let call = x=>{
+		
+		clg(x)
+		}
+		call(5)
+
+2.	When the arrow function is having Zero parameters /more than one parameter paranthesis is mandatory.
+	When there is Zero parameter we can also use underscore.
+
+		Example:
+			
+			zero parameters.
+
+			let call=()=>{
+			clg("")
+			}
+			call()
+
+			zero parameters.
+
+			let call= _ =>{
+			clg("")
+			}
+			call()
+
+			let call=(x,y)=>{
+			return x+y
+			}
+			clg(call(2,5))
+
+3. When the arrow function is having only one return statement no need to use curly brackets{} and return keyword.
+
+	Example:
+		
+		let call = (x,y)=>x+y
+		console.log(call(2,3));
+
+
+------------------------------------------------------------------------
+
+ JavaScript Objects:
+
+	Objects are realtime entities which are having their own states and behaviours.
+	Js objects will hold the data in the form of key and value pairswhere key is the object property, we can write the functions inside the objects as the behaviours.
+
+Types of Objects creation in js:
+
+1.	By using object literals({})
+2.	By using class and constructor method.
+3.	By using constructor functioin.
+4.	By using instance of object method.
+
+
+1.	Cretaion of objects using literals({}):
+
+		let student={
+    		name:"Smith",
+    		id:222,
+    		myName:function(){
+        	return "my Name is "+this.name+" my id is "+this.id; 
+    }
+}
+
+//accessing the object properties
+
+console.log(student.name);
+console.log(student.id);
+console.log(student.myName());
+
+// datatype of a object
+
+clg(typeof student);
+
+
+2.	Creation of objects using class and constructor
+
+Class is blueprint to create a JS object.
+
+
+syntax:
+
+	class class name
+{
+	
+	constructor(object properties){
+	refer to object properties
+}
+
+}
+
+
+Example:
+
+ 	class Person{
+
+    	firstname;
+    	lastname;
+
+    	constructor(firstname,lastname)
+   	 {
+        this.firstname=firstname;
+        this.lastname=lastname;
+    	}
+	//method
+
+    fullname(){
+        return this.firstname+" "+this.lastname
+    }
+}
+    let person1=new Person("abhishek","n")
+    console.log(person1.fullname());
+
+    let person2= new Person ("akshay","kumar")
+    console.log(person2.fullname());  
+
+
+3.Object creation using Constructor function:
+
+In this method without using class by just using a normal js function we can create the objects by using new keyword.
+In a js funtion if we use this keyword to refer the parameters of a function then function declaration will automatically converts into class declaration
+
+	
+
+fuction Constructor name(paramaeters)
+{
+this 
+}
+//object  creation
+let p=new constructorname(value)
+
+Example: 
+
+function Chair(color,material){
+this.color = color
+this.material = material
+this.action = function(){
+	return"material is "+this.material
+}
+
+
+}
+
+let x=new Chair("blue","plastic")
+console.log(x);
+
+//accessing object property
+
+console.log(x.color);
+
+//accessing object method
+
+console.log(x.action()); 
+
+
+
+
+
+4. Creation of objects using object instance:
+
+	In this method objects are created withnthe instance of a built in js class i.e Object.
+	Using new keyword with the object class these objects can be created.
+
+		Example:
+		
+			let o = new Object()
+			clg(person);
+
+			//adding object property
+
+			o.name="abhishek"
+			o.age ="23"
+
+			// adding object method
+
+			o.myfunc = function(){
+			return "Hello world"
+			}
+	
+			clg(o)	
+
+
+
+DOM:
+Document object model
+
+It is an interface where we can modify the html document such as changing content of the tag's dynamically or applying styles using js etc
+
+DOM is abbreviated as Documnent Object Model
+
+where:
+Document: html file/webpage.
+Objects: html tags.
+Model: Tree like representation of an html document in the browser.
+
+
+go through html tree diagram .......!!!!!
+
+
+
+Dom methods to access the Html Tag's:
+------------------------------------
+
+1.	document.getElementById():
+2.	document.getElementsByClassName():
+3.	document.getElementsByTagName():
+4.	document.querySelector():
+5.	document.querySelectorAll():
+
+
+
+document.getElementById():
+					It will select html tags by using ID attribute.
+					It will select only one occurance of ID that too 1st occurance.
+
+
+document.getElementsByClassName():
+						It will select html tags using Class attribute.
+						It will select all the occurances of class.
+						To modify the elements we need to use index positions.
+document.getElementsByTagName():
+						It will select the html tags by using tag name.
+						It will select all the occurances of Tag and returns html collection. 
+
+document.querySelector():	
+					It will select the html tags by using id,class and tag name.	
+					It will select only one occurance that too 1st occurance of id,class and tag name.
+					
+
+document.querySelectorAll(): 		
+					It is same as Query selector method but it will select all the occurances of id,class and tag name and returns NodeList. 
+					To modify the tags we need to use index positions.
+
+Note:
+	In both qselector and qselectorall clas is represented by using(.) and id is reperesented by (#) notation otherwise everthing will be considered as a tag.
+
+Modifications of Html tags using Dom:
+------------------------------------
+
+In Js we can modify the html tags by selecting them using DOM methods like document.getElementById() etc.
+we cwn modify the content of the tags, we can modify styles or we can add attributes etc.
+
+Modifications of Html Tags/Content/Text:
+
+We use 3 Dom properties to modify the content, they are:
+
+1. innerHtml:
+		It represents content of the tag including children  and Grandchildren tags of a html elements.
+
+2. innerText:
+		It will represents only text written inside a text.
+
+3. textContent: 
+		It is same like innertext, represents only text written inside a text.
+
+Example:
+
+let x= document.getElementById("sample")
+
+//modification of text/content
+
+console.log(x.innerHTML);
+console.log(x.innerText);
+console.log(x.textContent);
+
+x.textContent="JSPIDERS HEBBAL"
+x.innerHTML="HELLO GALAXY"
+x.textContent="<p>JSPIDERS HEBBAL</p>"
+
+
+MOdification of styles using DOM's:
+----------------------------------
+
+To modify styles we use 2 properties :
+
+1.Style:
+	By using this we can apply only one css proerty at a time, to add multiple properties we use cssText.
+
+Example:
+
+	x.style.color="green"
+	x.style.fontStyle="italic"
+
+
+
+2.CSS Text:
+	BY using this  we can apply multiple css properties.seperating each of the properties by semicolon.
+
+	Example:
+		
+		x.style.cssText="color:purple;font-style:italic"
+
+Setting Attributes Dynamically using DOM:
+----------------------------------------
+
+To add attributes we use a dom method i.e setAttribute()
+
+It will accept 2 arguments:
+1.AttributeName:
+			x.setAttribute("title","javascript is awesome")
+2.AttributeValue.
+			x.setAttribute("title","javascript is awesome")
+
+Working with Class Attribute:
+----------------------------
+
+In JS we can add Css Classes dynamically, to do so we use 2 properties they are:
+1. ClassName:
+		It is used to  add only one class at a time, to add multiple classes we go for ClassList.
+
+2. ClassList:
+		It is used to add multiple classes  at a time and also we can remove classes and toggle classes etc.
+		ClassList is having methods like
+ 
+		1.add():
+			It is used to add classes. It will accecpt n number of class names.
+			syntax:
+				variable.classList.add(class1,class2......)
+
+		2.remove():It is used to remove Classes
+			syntax:
+				variable.classList.remove(class1,class2......)
+
+				
+		3.toggle():It is used to toggle the classes, i.e if the class is not present it add class into the tag and if the class is already present it wil remove the class.
+ 			syntax:
+				variable.classList.toggle(class1,class2......)
+
+		4.contains():It is used to identify weather the class is present in a tag/not.
+				 It returns boolean value as true/false.
+			syntax:
+
+Strings:
+--------
+
+important programs in String:(reverse a string and palindrome)
+
+we can declare js Strings in 4 different ways:
+1.Single quoted.
+Ex:
+x='apple'
+console.log(x);
+console.log(typeof x);
+
+
+2.Double quoted.
+Ex:
+let x="abhishek"
+console.log(x);
+console.log(typeof x);
+
+3.BackTicked.
+Ex:
+x=`hi`
+console.log(x);
+console.log(typeof x);
+
+4.BuiltIn String Constructor method. 
+Ex:
+x=new String("hello world")
+console.log(x);
+console.log(typeof x) ;
+
+
+string interpolation in js:
+--------------------------
+it is used to write js variable inside a String:
+
+the variables even after  being inside a string will act as js variables.
+
+String interpolation is possible in backtick strings, and ${}
+
+It is used to avoid normal way of concatenation of strings with using + operator.
+//interpolation operator ${ }
+
+Ex:
+let fname=`abhishek`;
+let lname=`neelakanta`;
+
+console.log("my name is "+fname+" "+lname);//using concatenation
+
+console.log(`my name is ${fname} ${fname}`);//using string interpolation	
+
+
+Length of String:
+----------------
+
+To find the length of a String we use length property.
+
+Ex:
+
+let fname=`abhishek`;
+console.log(fname.length);
+
+Length of the String is equal to number of characters in a String.
+
+indexValues:
+-----------
+
+Every char of a String will have unique identity as index value of that char.
+using this index values we can identify the individual characters of a String uniquely.
+index value: using this index value we can identify individual chars
+index=length-1..
+index  starts will be 0..
+index ends will be length-1..
+negative index values starts from -1..
+
+Ex:
+
+let fruit=`apple`
+console.log(fruit[0]);
+console.log(fruit[4]);
+
+How to iterate the String ?
+using loops.
+
+let fruit=`apple`;
+for(let i=0;i<fruit.length;i++){
+    //console.log(i);		
+    //console.log(fruit);
+    //console.log(fruit[i]);
+}
+
+
+Methods of Strings:
+------------------
+1.concat():
+    // it used to cancatination of two or more strings
+    //it will accept n number of args
+    //it returns concatinated string result
+
+    let car="alto"
+    console.log(car.concat(` benz `,`audi`));
+
+2.charAt():
+    //it is used to find the character at specified index position.
+    //it will accept 1 argunment.
+    //it returns character of the specified index position.
+
+    let flower="rose"
+    console.log(flower.charAt(1));
+    console.log(flower.charAt(3));
+
+3.charCodeAt()
+    //it is used to find the ascii value of a character at aspecified index position.
+    //it will accept 1/no argunment.
+    //it returns Ascii value of the character specified by index position
+
+ 	let vege="potato"
+ 	console.log(vege.charCodeAt(1));
+
+4.indexof()
+    //it is used to find the index position of specified char in the string.
+    //it will accept 2 argunment,but 2nd is optional(to start the search)
+    //it returns index position of the character specified  char in the string.
+    //if the specified char is not present then it returns -1. 
+
+	let cycle="hercusless"
+	console.log(cycle.indexOf(`s`,5));
+
+5.includes()
+    //it is used to find weather the char is present in the String.
+    //it accepts 2 arguments.the second one is optional.
+    //it returns true/false.
+
+	let n="vinu"
+console.log(n.includes(`v`));
+
+
+
+Arrays in JS:
+------------
+
+Array is used to Store multiple values into a variable.
+JS array is of heterogenous data type bcoz it can store data of any type.
+JS array will not have a fixed length.
+Length will be dynamic, as per the number of elements in an array.
+ALl the values /the elements which are present in athe array will have unique index values starts from 0 and ends @arraylength-1
+
+
+Creation of Array:
+-----------------
+
+We can create the array in two ways:
+1.Using built in array constructor method--->
+2.Using array literals--->
+
+
+
+1.Using built-in Array constructor method:
+  ---------------------------------------
+
+Example:
+
+let arr1=new Array(`apple`,`mango`,`banana`)
+console.log(arr1);
+console.log(typeof arr1);
+
+2.Using array literals method:
+  ----------------------------
+
+Example:
+
+let arr=[1,2.5,`a`,`abhi`,true]
+console.log(arr);
+console.log(typeof arr);.
+
+
+Length of an Array:
+-------------------
+
+To get the length of array we use inbuilt length property.
+
+Example:
+	console.log(arr.length);
+
+Index Values:
+-------------
+	All the array elements  will have unique index values by using those unique index values we can identify the elements uniquely,
+	Index Values starts from 0 and ends at Length-1.
+
+Example:
+
+console.log(arr[0]);
+console.log(arr[3]);
+console.log(arr[4]);
+
+
+Iteration Of arrays using for loop:
+----------------------------------
+	
+
+Example:
+	for (let i=0;i<=arr.length-1;i++){
+      console.log(arr[i]);
+}
+
+
+Array Methods:(*---> important)
+--------------
+1.Concat():
+	It is used to concatenate 2 or more arrays.It will accecpt 'n' number of argunments.It will return a new concatenated array without affecting hte original array.
+	
+Example:
+
+let odds =[1,3,5,7]
+let evens=[2,4,6,8]
+console.log(odds.concat(odds,evens,[`a`,`b`,`c`]));
+
+2.IndexOf():
+	It is used to find out the index position of an array element, it will accecpt 2 argunments, 2nd argunment is optional.
+	If the element is not found it returns -1.
+
+syntax:
+
+array.indexOf(`array element`, index position(optional))
+
+Example:
+console.log(odds.indexOf(3));
+console.log(evens.indexOf(4));
+ 
+
+3.includes():
+	It is used to identify weather the element is present in the array/not.
+	It returns boolean value.
+	If the element is present it returns true, if not false.
+	It accecpts 2 argunments, 2nd argunment is optional.
+
+syntax:
+	array.includes(`array element`, index position(optional))
+
+Example:
+	console.log(odds.includes(2));
+      console.log(odds.includes(7,1));
+
+
+
+*4.slice():
+	It is same as String Slice method, where based on the index positions an array will be sliced and it returns a new array.
+	without affecting the original array.
+
+Example:
+	console.log(evens.slice(3));
+ 	console.log(evens.slice(1,-1));
+ 	console.log(evens.slice(1,3));
+
+*5.splice():
+		It Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+		It accepts 3 number of argunments(start: number, deleteCount: number, ...items: string[]) the 3rd is optional.
+Example:
+
+let subj=[`engish`,`kannada`,`science`,`social`];
+console.log(subj);
+console.log(subj.splice(1,1,`hindi`,`kannada`,`maths`));
+console.log(subj);
+	
+
+	
+
+*6.push():
+	It is used to add elements to the end of the array, it will accecpt n number of argunments, it will affect the original array.
+	It returns the updated array length.
+
+Example:
+
+let car=[`audi`,`benz`,`maruthi`,`swift`];
+console.log(car);
+car.push(`santro`,`zen`)
+console.log(car);
+	
+
+*7.pop():
+	It is used to remove/delete one last element from the array,
+	It will not accecpt any argunments.
+	It will return the removed element.
+	iF u need only the last element go for pop()
+
+	Example:
+
+	car.pop()
+	console.log(car);
+	car.pop()
+	console.log(car);
+	
+	
+
+*8.shift():
+	It will remove/delete first element from the begining of the array.
+	It alters the array.
+	It will not accecpt any argunments.
+	If u need only the first element go for shift().
+
+Example:
+	car.shift()
+	console.log(car);
+
+
+*9.unshift():
+	It is used to add elements from the starting an array, it accecpts n number of argunmets.
+	It returns updated array length.
+	It will affect the original array.
+
+Example:
+car.unshift(`zen`,`santro`) 
+console.log(car);
+
+
+10.reverse():
+	It is used to reverse the array elements.
+	It will not accecpt any argunmets.
+	It will Affect/Modify original Array.
+
+Example:
+	let rev=[`java script` ,`is` ,` easy` ,` peasy`];
+	console.log(rev.reverse());
+	
+
+
+11.fill():
+	It is used to fill the array with given value .
+	It accecpts 3 Argunments, second n third Argunment is optional.
+	It will modify original array.
+	
+Synatax:
+
+Array.fill('element',  start index, end index)
+
+Example:
+let num=[10,20,30,40,50]
+console.log(num);
+num.fill(11,1,3)
+console.log(num);
+
+
+
+12.join():
+	It is used to convert an array to string.
+	It accecpts a seperator string as the argunment.
+	It will not modify original array.
+	It returns a String.
+
+Example:
+	let letters=[`a`,`b`,`c`,`d`]
+	console.log(letters.join(``));
+
+	
+*13.forEach():
+	It is used to perform commo operation's on all  the elements.
+	forEach() will accecpt function as the argunment.
+	It will not modify original array.
+	It will just perform the common operation on the elements.
+	It will return Undefined.
+Syntax:
+Array.forEach(function(parameters){
+	Statements;
+})
+
+Example:
+	let choc=[`munch`,`kit-kat`,`perk`,`dairy Milk`,`5 star`]
+	choc.forEach(function(temp)
+ {
+     console.log(temp +` is a chocolate`);
+ })
+ choc.forEach((temp)=>{
+     console.log(temp+' great');
+ })
+	
+
+	
+*14.map():
+	It is used to perform common operation's on all the array elements.
+	It will return a new array of modified elements.
+	It accecpts a function as a argument.
+
+	Example:
+	let nums=[1,2,3,4]
+	let res=nums.map((temp)=>{
+   	 return temp + 10;
+    
+	})
+	console.log(res);
+
+
+	
+	
+*15.filter():
+	It is used to filter the array elements based on the condition.
+	It returns a new array of  filtered elements.
+	It accecpts function as the argunment. 
+
+	Example:
+
+	let nums=[1,2,3,4]
+	for(let i=0;i<=nums.length-1;i++){
+    	if(nums[i]%2===0){
+        console.log(`${nums[i]} is even`);
+    	}
+	}
+	res=nums.filter((temp)=>{
+   	 return temp%2 ===0
+	})
+	console.log(res);
+	
+	
+	
+	
+*16.reduce():
+	It is used to reduce the array into a single value.for Example, sum of array/product of array.
+	It will accecpt function as the argunment and returns the value of the object.
+	
+	syntax:
+	arrayreduce(function(currrent value,next value){
+	Statements;
+	})
+
+
+
+	Example:
+	let nums=[1,2,3,4]
+ 	let res=nums.reduce((currentvalue,nextvalue)=>{
+    	return currentvalue+nextvalue
+ 	})
+	console.log(res);
+
+
+
+
+		
+*17.sort():
+	It is used to sort the array in ascending order/descending order.
+	By default it will sort the arraay elements based on the ascending order of ASCII value.
+	It will modify the original array.
+
+	syntax:
+	array.sort(function(a,b){
+	Statement;
+
+	})
+	
+	Example:
+
+	let nums1=[1,200,2,1000,3]
+	let x=nums1.sort(function(a,b){
+   	return a-b	//ascending
+	})
+	console.log(nums1);
+	let z=nums1.sort(function(a,b){
+   	 return b-a	//descending
+	})
+	console.log(nums1);
+
+
+Important Questions:
+
+1.What are functions,and types of functns in JS?
+2.What is the difference b/w annonymous and arrow function?
+3.What is the difference b/w general/named function's and annonymous function?
+4.What is Hoisting and Types of Hoisting?
+5.What is the difference b/w  function declaration and function Expression?
+6.What are Objects in JS?
+7.How to create objects in JS?
+8.What is this Keyword?
+9.What is Inheritance?
+10.What is DOM and what are the methods to access the DOM Elemenets?
+11.What is the difference b/w getElementbyId and querySelector methods?
+12.Waht aid the difference b/w querySelector and querySelectorAll method?
+13.What is the differnece b/w innerText and innerHtml method?
+14.What is the differnece b/w sclice and substring method?
+15.Wap to revrese the string without using buit-in functions.
+16.wap to find weather a string is palondrome/not. 
+
+ARRAYS:
+1.What are the features of JavaScript Array?
+2.wap to itterate the Array?
+3.what is push, pop, shift, unshift, slice, splice, forEach, map, filter?
+4.what is the difference b/w slice and splice?
+
+
+pop up boxex:
+
+There are 3 built in js methods to create popup boxex on the web page, they are:
+1)Alert()
+2)Confirm()
+3)Prompt()
+
+Alert():
+-------
+	It is used to Display A pop upo box or a window to show a message for the user.
+	It will be having one okay button in the pop up window.
+	This method will accecpt only one argunment as a  String.
+	
+Example:
+		alert(`Hello PopUp`)
+
+Confirm:
+-------
+	It is used to create a pop up window to get the confirmation of the user.
+	It will be having 2 buttons in the pop up, okay and cancel.
+	It will return a boolean value, when a user clicks on Okay it returns true and the user clicks o cancel it returns false.
+	It will accecpt only oe argunment as a String.
+	
+Example:
+	
+	let confirmation=confirm(`is it okay?`)
+	console.log(confirmation);
+
+Prompt:
+------
+	It is used to create pop up window to accecpt the user inputs.
+	It will return a String, will be having 2 buttons, okay and cancel,when a user clicks on Okay it returns user input and the user clicks o cancel it returns null.
+	
+Example:
+
+	let x=prompt(`Enter you'r name?`)
+	console.log(typeof x);
+	console.log(x);
+
+	when user enters the number:
+	---------------------------
+ 	let y=parseInt(prompt(`Enter your name`))
+ 	console.log(typeof y);
+ 	console.log(y);
+
+	method2
+
+	let z=Number(prompt(`Enter your name`))
+	console.log(typeof z);
+	console.log(z);
+
+
+Event Handling in JS:
+---------------------
+
+Using Js we can handle the browser actions such as clicking on a button, loading a webpage, typing something in the input field etc.
+JS Events helps us to handle the actions dynamically on the browser.
+There are many events in JS. they are:
+1.click.
+Example:
+	let y=document.getElementById('datebtn')
+	y.addEventListener(`click`,()=>{
+    	let date=new Date()
+    	alert( `Today's date is ${date.toLocaleDateString()}`)
+})
+
+2.dblclick. 
+3.mouseover.														(sadiksd0@gmail.com)
+4.mouseout.
+5.focus.
+6.blur.
+7.Keyup.
+8.Keydown.
+9.submit.
+
+To handle the events in JS we use functions and those functions will execute when any event occurs on the webpage.
+To call the functions based on the event occurs we use addEventListener method/we use attributes like onlick , ondblclick etc in the html tag.
+
+addEventListener():
+------------------
+It is a built in JS method taht accecpts 2 argunments (event,function, that executes when the respective event occurs on the web page.)
+
+Example:
+	let y=document.getElementById('datebtn')
+	y.addEventListener(`click`,()=>{
+    	let date=new Date()
+    	alert( `Today's date is ${date.toLocaleDateString()}`)
+})
+ 
+
+Date and Math Objects:
+---------------------
+
+By using date constructor method we can get the current date and time in JS.
+Date is a Built in Constructor method, Using that we need to create object of date with the help of New Keyword.
+From the date object we can access Date, Day, month and we can also access some time related values such as hours, minutes, seconds etc.
+
+Date Object Methods:
+
+
+//methods to access the date elements
+
+console.log(`Todays date is${y.get.Date}`);
+console.log(y.getDate());
+console.log(y.getDay());
+console.log(y.getFullYear());
+console.log(y.toLocaleDateString());
+console.log(y.getMonth());
+
+
+//methods to access the time elements
+
+console.log(y.getHours());
+console.log(y.getMinutes());
+console.log(y.getSeconds());
+console.log(y.toLocaleTimeString());
+console.log(y.getMilliseconds());
+
+
+outputs:
+--------
+
+4 Wed Dec 28 2022 11:39:47 GMT+0530 (India Standard Time)
+5 Todays date is28
+6 28
+7 3
+8 2022
+9 12/28/2022
+10 11
+13 11
+14 39
+15 47
+16 11:39:47 AM
+17 226
+
+
+Math Object:
+-----------
+It is an intrinsic JS object, It is used to perform operations such as finding sqrt,cubrt, etc
+
+
+
+let a=Math
+console.log(a);
+
+console.log(a.E);
+console.log(a.PI);
+console.log(Math.sqrt(25));
+console.log(Math.cbrt(75));
+console.log(Math.max(1,100,10,-5));
+console.log(Math.min(1,100,10,-5));
+console.log(Math.round(4.5));
+console.log(Math.round(4.05));
+console.log(Math.trunc(82.23454));
+console.log(Math.floor(82.23454));
+console.log(Math.ceil(82.23454));
+console.log(Math.pow(4,2));
+console.log(a.pow(5,2));
+
+
+output:
+------
+
+2.718281828459045
+3.141592653589793
+5
+4.2171633265087465
+100
+-5
+5
+4
+82
+82
+83
+16
+25
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+			
+
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+				
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Nav Try</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-color: aqua;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: blueviolet;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav .logo{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+
+        nav .logo img{
+            width: 15%;
+        }
+
+        nav .logo h1 a{
+            font-size: 1.4rem;
+            color: #fff;
+            text-decoration: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul{
+            margin-right: 30px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            margin-left: 40px;
+            transition: transform 1s;
+        }
+
+        nav ul li:hover{
+            transform: scale(1.2);
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: #fff ;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            <h1><a href=""> Company Name</a></h1>
+        </div>
+
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Explore</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Help</a></li>
+        </ul>
+    </nav>
+
+
+    <script>
+
+    </script>
+    
+</body>
+</html>

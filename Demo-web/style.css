@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+/* navbar style */
+
+.navbar{
+    background-color: #4e5944;
+    /* background-color: #57604D; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.navbar nav a{
+color: white;
+margin-left: 2rem;
+text-decoration: none;
+}
+
+.navbar nav a:hover{
+color: aqua;
+text-decoration:underline;
+}
+
+
+.main-header{
+    padding: 20px;
+    background-color: #e2e2e2;
+
+    
+}
+
+.header{
+    display: flex;
+    /* justify-content: space-between; */
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px gray;
+    /* align-items: center; */
+    
+}
+
+
+.main-header .header .text{
+    text-align: center;
+    line-height: 40px; /* is used to give height for text  */
+    padding: 50px;
+    margin-top: 20px;
+    /* align-self: center; */
+    /* background-color: red; */
+    /* align-items: center; */
+    word-wrap: break-word;
+    width: 50%;
+    color: #4e5944;
+
+}
+
+.main-header .header .text h1{
+    display: none;
+}
+
+.text-img img{
+    width: 100%;
+    height: 500px;
+    justify-content: end;
+}
+
+.header .text p{
+    font-size: 2rem;
+}
+
+
+
+
+
+.header-next{
+display: flex;
+padding-left: 30px;
+padding-right: 30px;
+height: 200px;
+border: 1px  #4e5944;
+}
+
+.header-next p{
+    line-height: 20px;
+}
+
+.header-next .head-inner h1{
+    margin-bottom: 30px;
+}
+
+
+.head-inner{
+    padding-right: 50px;
+    text-align: justify;
+}
+.header-next h1{
+    color: #4e5944;
+}
+
+small{
+    color: #4e5944;
+}
+
+.testimonial{
+    padding: 20px;
+    text-align: justify;
+    border-left: 1px solid #4e5944;
+}
+
+/* about */
+
+.card{
+    width: 200px;
+    box-shadow: 2px black;
+    padding: 20px;
+}
+
+.card img{
+    display: block;
+    margin: auto;
+    border: 6px solid white;
+    margin-bottom: 15px;
+}
+
+
+.card button{
+    background-color: gray;
+    color: #fff;
+    padding: 5px;
+    /* border-radius: 5px; */
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: #4e5944;
+}
+
+.imagediv{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about h1{
+    padding-left: 30px;
+    color: #4e5944;
+}
+
+.about{
+    padding: 30px 0;
+    border: 2px solid #fff;
+    background-color: #e2e2e2;
+}
+
+.card h3{
+    padding-bottom: 8px;
+    font-size: 1rem;
+    color: #4e5944;
+}
+
+.card p{
+    padding-bottom: 20px;
+    color:#4e5944;
+}
+
+
+/* footer */
+
+
+
+.footer-inner{
+    display: flex;
+    justify-content: space-around;
+}
+
+.last1{
+    width: 300px;
+    padding: 40px;
+}
+
+.last1 a{
+    background-color: gray;
+    color: #fff;
+    padding: 5px;
+    /* border-radius: 5px; */
+    border: none;
+    width: 75%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+
+.footer-inner-two{
+    background-color: #4e5944;
+/* padding: 10px;   */
+padding: 6px 0 3px;
+}
+
+.socialdiv{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.footer-inner-two .social{
+    float: left;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+.footer-inner-two img{
+    width: 1.5%;
+    border-radius: 20px;
+}
+
+.footer-inner-two p{
+    color: #b5c1aa;
+    font: 11px/30px Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-right: 10px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* about us */
+
+
+.container {
+	padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+.container .container-inner{
+	width: 940px;
+	padding: 30px 10px 0;
+}
+.container img {
+	border: 1px solid rgba(231, 231, 231, 0.8);
+    width: 100%;
+    height: 298px;
+}
+h1 {
+	color: #57614e;
+	font: 29px/30px "Times New Roman", Times, serif;
+	margin: 0 0 12px;
+	text-transform: uppercase;
+}
+
+.container-inner h2 {
+	color: #626262;
+	font: 19px/24px "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.ptag {
+	color: #626262;
+	font: 14px/24px Arial, Helvetica, sans-serif;
+	margin: 0 0 24px;
+}
+
+.ptag a {
+	color: #626262;
+}
+.ptag  a:hover {
+	color: #333333;
+}
+
+
+/* practise */
+.practise{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.practise-inner{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.parctise1 h2{
+    min-height: 40px;
+    color: #626262;
+	font: 19px/24px "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
+
+}
+
+.parctise3 p{
+    margin: 0;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    color: #626262;
+    min-height: 40px;
+	font: 19px/24px "Times New Roman", Times, serif;
+}
+
+.practise-inner a{
+    text-decoration: none;
+    color: #755c02;
+    min-height: 40px;
+}
+
+.practise2{
+    width: 40%;
+    padding: 20px;
+}
+
+.practise2 h2{
+    min-height: 40px;
+    color: #626262;
+	font: 19px/24px "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.practise2 p{
+    margin: 0;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    color: #626262;
+    min-height: 40px;
+	font: 19px/24px "Times New Roman", Times, serif;
+}
+
+
+.card{
+    display: grid;
+    grid-template-columns: auto auto;
+    float: left;
+    margin: 0 20px 36px;
+    position: relative;
+    /* background-image: url(img/bride.jpg); */
+    height: 158px;
+}
+
+.card-two{
+    height: 158px;
+}
+
+
+
+.card span{
+    color: #e2e2e2;
+    display: block;
+    font: 19px/46px "Times New Roman", Times, serif;
+    height: 46px;
+    width: 265px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 21px;
+    left: 8px;
+}
+.card-one img{
+    width: 135%;
+}
+
+/* .card-one{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.card-one span{
+    position: absolute;
+    top: 104%;
+    left: 50%;
+    transform: translate(-34.5%, -50%);
+    background-color: #333333;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card-one span:hover{
+    background-color: #4e5944;
+}
+
+/* lawyers */
+
+.parctise5{
+    margin: 0;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    color: #626262;
+    min-height: 40px;
+	font: 19px/24px "Times New Roman", Times, serif;
+}
+
+.practise21{
+    width: 40%;
+    padding: 20px;
+}
+
+.practise21 h2,h3{
+    min-height: 40px;
+    color: #626262;
+	font: "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.practise21 .img1{
+    display:flex;
+    margin: 0 0 24px;
+}
+
+#sub{
+    background-color: gray;
+    color: #fff;
+    padding: 5px;
+    /* border-radius: 5px; */
+    border: none;
+    width: auto;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 600px){
+    .text{
+        display: none;
+            }
+}
+

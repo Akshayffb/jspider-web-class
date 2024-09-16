@@ -1,0 +1,37 @@
+write a program to swap the Variables
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swap Numbers</title>
+  </head>
+  <body>
+    <script>
+      // Solution 1
+
+      // let a = prompt("Enter the a number"); //12
+      // let b = prompt("Enter the b number"); //11
+
+      // a = a + b;  // a = 23
+      // b = a - b;  // b = 23-11=12
+      // a = a - b;  // a = 12
+
+      // alert("a value"+a);  // 10
+      // alert("b value "+b);  // 5
+
+      //Solution 2
+      let x = prompt("enter 1st num");
+      let y = prompt("enter 2nd num");
+      let z = prompt("enter 3rd num");
+
+      [x, y, z] = [z, y, x];
+
+      alert(x); // 10
+      alert(y); // 5
+      alert(z);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* color: rgb(248, 248, 248);
+    background-color: rgb(32, 32, 36); */
+
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.contain{
+    width: 20%;
+    height: 760px;
+    background-color: #3D84A8;
+}
+
+.contain .proimg{
+        padding-top: 40%;
+        text-align: center;
+
+}
+
+#name{
+    padding: 5%;
+}
+
+.contain .proimg img{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.contain .proimg p{
+    width: 40%;
+    background-color: green;
+    padding: 6px;
+    margin-top: 5%;    
+    border-top-left-radius: 15px;   
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+.contain .proimg h2{
+    font-family: "Sofia", sans-serif;
+    letter-spacing: 0.1em;
+
+}
+
+.contain .proimg h5{
+    width: auto;
+    font-weight: 100;
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.contain .proimg h6{
+    padding-bottom: 15px;
+    font-size: 1rem;
+}
+
+
+
+
+.proimg h6 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.icons a{
+    width: 20%;
+}
+
+.icons li{
+
+    list-style: none;
+    width: 20%;
+}
+
+.icons li a img{
+    width: 50%;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- vh-viewport height
+    vw-viewport weight -->
+    <title>Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: right;
+            background-color: aqua;
+            flex-wrap: wrap; /* is used to adjust size based on the screensize */
+            align-items: center;
+            /* height: 50px; */
+            padding: 10px;
+        }
+
+        .navbar .logo{
+            /* align-self: flex-start; */
+            width: 20px;
+            align-self: start;
+
+        }
+
+        .navbar .logo img{
+            width: 30px;
+            height: 30px;
+        }
+
+
+        .nav{
+        margin-right: 30px;
+        }
+        
+
+        .navbar .nav .items{
+            color: #000;
+            margin-left: 30px;
+            align-self: flex-end;
+            text-decoration: none;
+
+        }
+
+        button{
+            color: #000;
+            height: 30px;
+            margin-right: 40px;
+            width: 50px;
+            border: 0px #000 solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:focus{
+            box-shadow: 2px 3px 10px black;
+        }
+
+        button:hover{
+            background-color: yellow;
+        }
+
+        .container{
+            height: 710px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box, .box1, .box2, .box3{
+            height: auto;
+            width: 100px;
+            text-align: center;
+            border-radius: 20px;
+            
+        }
+
+        .box{
+            background-color: blue;
+            /* transform: rotate(-45deg); */
+            transform: transform 2s;
+
+        }
+
+        .box:hover{
+            transform: translateY(100px);
+        }
+        .box1{
+            background-color: blueviolet;
+            align-self: flex-start;
+            width: auto;
+            transition: transform 2s;
+        }
+
+
+        .box1:hover{
+            transform: rotate(360deg);
+        }
+
+        .box2{
+            background-color: red;
+            /* transform: rotate(45deg);
+            transform: skew(40deg); */
+            transition: transform 2s;
+
+
+        }
+        .box2:hover{
+            transform: scale(1.5);
+            /* transform: matrix3d(2); */
+            background-color: aliceblue;
+
+            transform: translateY(100px);
+        }
+        .box3{
+            background-color: yellow;
+            align-self: flex-end;
+        }
+
+
+        .intro-heading::first-letter{
+            color: aqua;
+        }
+        .intro-para::first-line{
+            color: blueviolet;
+        }
+        .place::placeholder{
+            color: red;
+        }
+
+        *::selection{
+            color: chartreuse;
+        }
+
+        .galary{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 300px;
+            height: 300px;
+        }
+
+        .galary img{
+            padding: 10px;
+            border-radius: 15px;
+            transition: transform 2s;
+            width: 30vw;
+            height: 30vh;
+        }
+
+        .galary img:hover{
+            transform: translateX(-50px);
+        }
+
+        .main-gal{
+            height: 800px;
+            background-color: rgb(84, 217, 74);
+            
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/food-1.png" alt="">
+        </div>
+        <div class="nav">
+            <a class="items" href="">Home</a>
+            <a class="items" href="">About</a>
+            <a class="items" href="">Help</a>
+            <a class="items" href="">Blog</a>
+        </div>
+        <button>Login</button>
+    </div>
+
+    <div class="intro">
+        <input type="text" class="place" placeholder="Search Something....">
+        <h1 class="intro-heading">Introduction</h1>
+        <p class="intro-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+             Adipisci possimus inventore consequatur facere magni perspiciatis nesciunt odio pariatur ratione, labore debitis sed aspernatur aliquam at minus provident nostrum quae perferendis!</p>
+    </div>
+
+
+    <div class="container">
+        <div class="box"><h1>Hi</h1></div>
+        <div class="box1"><h1>Welcome</h1></div>
+        <div class="box2"><h1>To</h1></div>
+        <div class="box3"><h1>Class</h1></div>
+
+    </div>
+
+    <div class="main-gal">
+    <div class="galary">
+        <img src="https://images.unsplash.com/photo-1668079078320-76dba982b397?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1667502102937-6382343eed85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1667502102937-6382343eed85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1667502102937-6382343eed85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1654793182455-83e2a50f3494?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1652162539309-c96b2694f02b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1355&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1652162539309-c96b2694f02b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1355&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1652162539309-c96b2694f02b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1355&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1667845210425-5f805be2f355?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+body{
+    background-color: cadetblue;
+}
+
+.navbar{
+   display: flex;
+  justify-content: space-between;
+
+}

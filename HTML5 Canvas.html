@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenopix Technologies Private Limited</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="circle" width="578" height="200"></canvas>
+    
+    <!-- <h1>circle 1</h1> -->
+
+    <script>
+      var a = document.getElementById('circle');
+      var b = a.getContext('2d');
+      var c = a.width / 4;
+      var d = a.height / 2; 
+      var e = 50; //radius
+
+      b.beginPath();
+      b.arc(c, d, e, 0, 2 * Math.PI);
+      b.fillStyle = '#FFD966';  //color filling
+
+      b.fill();
+      b.lineWidth = 1;
+      b.strokeStyle = '#000'; //border color
+      b.stroke();
+
+      b.beginPath();
+      b.arc(c, d, e, 0, 2 * Math.PI);
+      b.moveTo(5,48);
+      b.lineTo(100,50);
+      b.stroke();
+    </script>
+
+    <br>
+
+    <!-- <h1>circle 2</h1> -->
+
+    <canvas id="circle1" height="200" width="578"></canvas>
+    <script>
+        var a = document.getElementById('circle1');
+        var b = a.getContext('2d');
+        var c = a.width / 4;
+        var d = a.height / 3; 
+        var e = 50; //radius
+  
+        b.beginPath();
+        b.arc(c, d, e, 0, 2 * Math.PI);
+        b.fillStyle = '#2B78E4';  //color filling
+  
+        b.fill();
+        b.lineWidth = 1;
+        b.strokeStyle = '#000'; //border color
+        b.stroke();
+      </script>
+
+      <br>
+
+      <!-- <h1>circle 3</h1> -->
+
+      <canvas id="circle2" height="200" width="578"></canvas>
+
+      <script>
+        var a = document.getElementById('circle2');
+        var b = a.getContext('2d');
+        var c = a.width / 4;
+        var d = a.height / 3; 
+        var e = 50; //radius
+  
+        b.beginPath();
+        b.arc(c, d, e, 0, 2 * Math.PI);
+        b.fillStyle = '#CC0000';  //color filling
+  
+        b.fill();
+        b.lineWidth = 1;
+        b.strokeStyle = '#000'; //border color
+        b.stroke();
+      </script>
+
+
+      <br>
+
+      <!-- <h1>circle 4</h1> -->
+
+      <canvas id="circle3" height="200" width="578" ></canvas>
+      <script>
+        var a = document.getElementById('circle3');
+        var b = a.getContext('2d');
+        var c = a.width / 4;
+        var d = a.height / 3.8; 
+        var e = 50; //radius
+  
+        b.beginPath();
+        b.arc(c, d, e, 0, 2 * Math.PI);
+        b.fillStyle = '#6AA84F';  //color filling
+  
+        b.fill();
+        b.lineWidth = 1;
+        b.strokeStyle = '#000'; //border color
+        b.stroke();
+      </script>
+    
+</body>
+</html>

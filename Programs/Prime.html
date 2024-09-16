@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime</title>
+</head>
+<body>
+    <h1>Prime</h1>
+    <button onclick="primee()">Click to check</button>
+
+    <script>
+            var c=console.log.bind(document);
+
+        function primee(){
+            var count = 0;
+
+            let num = Number(prompt('Enter the number'));
+            // var check = 0;
+            for(let i=2; i<num; i++){
+            if(num%2 == 0){
+                count ++;
+                break;
+            }
+        }
+        if(count == 0){
+        c(`${num} is prime`)
+        }else
+        c(`${num} is not prime`)
+    }
+    </script>
+</body>
+</html>

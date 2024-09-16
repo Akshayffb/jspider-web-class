@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;  
+        }
+        .display{
+            display: none;
+        }
+        
+        @media (max-width: 320px) {
+            body{
+                background-color: red;
+            }
+            .one{
+                display: block;
+            }
+            /* .two, .three{
+                display: none;
+            } */
+        }
+
+        @media (min-width:321px) and (max-width: 720px) {
+            body{
+                background-color: green;
+            }
+            .two{
+                display: block;
+            }
+            /* .one, .three{
+                display: none;
+            } */
+        }
+
+        @media (min-width:721px) and (max-width: 1200px) {
+            body{
+                background-color: blue;
+            }
+            .three{
+                display: block;
+            /* }
+            .one, .two{
+                display: none;
+            } */
+        }
+    }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="display">
+        <h1 class="one">1111111111111</h1>
+        <h1 class="two">222222222222</h1>
+        <h1 class="three">33333333</h1>
+    </div>
+    
+</body>
+</html>

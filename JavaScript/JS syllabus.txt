@@ -1,0 +1,1413 @@
+JavaScript Syllabus
+
+
+Section-1
+Introduction
+Keywords & Variables
+DataTypes
+Operators
+Control Statments
+
+
+Section-2
+Functions
+Objects
+Hoisting
+Arrays & it's methods
+Strings and it's methods
+Event Handlers
+DOM
+Validations
+
+
+Section-3
+Inheritence
+Constructors
+Destructuring of arrays and objects
+Spread and rest operator
+call backs, Promises
+API
+
+
+
+
+
+Control Statments
+
+Control Statments are used to control the flow of Statments
+there are two Types
+1. Branching or Conditional Statments
+2. Looping Statments
+
+
+1. Branching or Conditional Statments
+    if
+    if else
+    if else if
+    nested if
+    switch case
+
+2. Looping Statments
+    for
+    while
+    do while
+    for in 
+    for of
+
+
+Types of Printing Statments
+
+    console.log();
+    document.write();
+    window.alert();
+
+
+
+
+
+difference between 
+java:
+
+1.oops language
+2.platform independent
+3.secure and rhobust
+4.compiler and interpreter
+5.Backend programming language
+6.uses JDk
+7.Strictly typed in nature.
+
+java script:
+
+1.partially OOPs language.
+2.platform Independent.
+3.Secure and rhobust.
+4.interpreter.
+5.Frontend and Backend PL.
+6.uses JavaScript Engine.
+7.loosely typed in nature.
+
+
+
+
+
+
+
+
+    Interview Question Module 1
+
+     Whta is JavaScript?
+     What is current version of JavaScript?
+     what is difference between java and JavaScript?
+     What is difference JavaScript and ECMAScript?
+     What is difference between var, let and const?
+    var= will allow redclaration
+    let= won't allow redclaration
+    const= constant throught out the program, like a final Variables
+
+     What is undefined?
+     what are the difference data type used in JavaScript?
+     what type is used to check datatyoe of Variables?
+     Ternery operator working with an example
+     What are Control Statments and it's type?
+     what is difference between while and do while?
+     what is difference for in and for of?
+
+
+
+
+
+
+    Functions
+    will not have returnType
+    parameter should not be declared with DataTypes
+    arguments can have equal numbers as parameter,
+
+
+              
+              
+              
+
+
+
+
+
+
+
+Module 2
+
+              
+
+Functions
+
+  This are block of code or set of instructions used to perform a specific tasks
+  To declare Functions in JavaScript we use Function keyword
+  Functions will have parameter without DataTypes, it should have only Variables name
+  Code written inside the Function will be executed only when Function is called
+  JavaScript Function will not have returnType
+  Function arguments usually should be equal to the number parameters given but if we give less or more arguments Function will not throw any error. instead it will give NaN
+
+Naming Convention or IT Rules
+
+    One Word = name should be in lowercase
+    Multi Word = first letter should be in lowercase and next word First letter should be in Uppercase(camelCase)
+
+
+
+Syntax to declare a Function
+
+    function functionname(arguments)
+    {
+        set of codes
+    }
+
+
+how to call a function
+
+    function(arguments)
+
+
+
+example: function addNumber(a,b)
+{
+    return a+b;
+}
+window.alert(addNumber(1,2))
+
+
+
+
+Types of Function
+    General or Named function
+    Annonymous Function(without name)
+    Arrow function
+    Self Invoking function or Immediately Invoking function
+    Call back function
+
+
+General or Named function
+    Syntax: function functionname(arguments){
+        set of codes
+    }
+    how to call: functionname(arguments)
+
+
+    example: function name(a,b){
+        return a+b;
+    }
+    console.log(name(2,4));
+
+
+
+
+Annonymous 
+
+this function will not have an identifier or a name
+if we need to call the function we need an identifier or name so we can store Annonymous function into a Variable
+Variable will act as identifier or name of the function
+
+    Syntax: Variablename = function(arguments){
+        set of codes
+    }
+    function call: Variable(arguments);
+
+
+
+
+    Annonymous function example:
+       let p=function(x,y)
+      {
+        return x*y;
+      }
+     console.log(p(1,2));
+
+
+
+
+Arrow function
+
+    it will not have an identifier or a name, just like Annonymous function
+    to declare Arrow function we will not use function keyword instead of that we'll Arrow symbol(=>)
+
+    Syntax: Variable = (arguments) =>{
+        setof codes
+    }
+    to call function: Variable(arguments)
+
+    example:    let c= (a,b) =>
+    {
+        return a+b;
+    }
+    console.log(c(2,4));
+
+
+
+
+Self Invoking function or IIF(Immediately Invoking function)
+
+    this function should be written inside the paranthesis
+    this function don't need an identifier or a function name to get called , they will invoke themself as soon as the function Statments ends 
+    Note: Semicollen is mandatory to terminate the previous code before writting Immediately Invoking function or Self Invoking function
+
+
+    Syntax:
+    (function (arguments){
+        set of codes
+    } (arguments) )
+
+
+
+    example: 
+    (function (){
+        console.log("I'm Self Invoking function");
+    }())
+
+    () is used to invoke Immediately Self Invoking function
+    to call manually we can use Variable for that below example
+
+
+    example 2:
+        let rsult=(function(x,y){
+        return x+y;
+    }(2,4))
+    console.log(rsult);
+
+
+
+
+Hoisting
+
+    It is the default behaviour of JavaScript to move all the declaration to the top of the scope prear to the execution by the interpreter
+
+    Types of Hoisting
+
+            Variable Hoisting
+            Function Hoisting
+
+
+            Variable Hoisting
+            It is possible only with var keyword, where the declaration will move to the top of the scope
+            To avoid Hoisting we can use Let and const keyword to declare the Variable
+
+            example: x=10;
+                     document.write(x);
+                     Var x;
+
+
+            Function Hoisting
+            It is possible only with a function declaration such as General/Named function
+            It is not possible with function initialization or function expression such as Arrow, Self Invoking function and Annonymous Function
+
+            example: document.write(call(3,2));
+                     function call(x,y){
+                        document.write("General Function");
+                        return x+y;
+                     }
+            
+
+
+Different ways of Arrow Functions Syntax
+
+    When the Arrow function is having one parameter/argument paranthesis () is not mandatory
+
+    example: let call = x =>{
+        document.write(x);
+    }
+    call(2);
+
+    When the Arrow function is having 0 parameter/argument or more than one parameter/argument paranthesis () is mandatory
+    When there is zero parameter we can also use undersore _ 
+
+    example: let call = () =>{
+        document.write("I'm with zero argument");
+    }
+    document.write(call);
+
+
+    example 2: let call = _ =>{
+        document.write("I'm with undersore");
+    }
+    document.write(call);
+
+
+    When the Arrow function is having only one return Statment no need to use curly barackets { } and return keyword
+
+    example: let call = _ => document.write("I'm without return type");
+
+
+    When  the Arrow function is having only one Printing Statment no need to use curly barackets
+
+    example: let sum = (x,y) => document.write(x+y);
+              document.write(2,3);
+
+
+    
+Objects
+
+    obejcts are real time entity which are having their own states and behaviour
+    JavaScript objects will hold the data in the form of key and value pairs where key is the object property we can write function inside the objects as the behaviour.
+
+
+    Types of Object creation
+
+        1. By using object literal { }
+        2. By using class and Constructor method
+        3. By using Constructor function
+        4. By using instanceOf object method
+
+            1. creation of object using object literal { }  
+
+                Syntax: keyword Variablename = {
+                    keyname : value,
+                    keyname : value,
+                }
+                document.write(Variablename.keyname);
+                
+
+
+                 example: var name = prompt("Enter the name");
+                    var age = prompt("Enter the age");
+
+                    let Student = {
+                    name : "akshay",
+                    age : age,
+                        myName : function(){
+                    return "my Name is "  + this.name + " and my age is " + this.age;
+                                        }
+                                 }
+
+                    document.write(Student.name);
+                    document.write(Student.age);
+                    document.write(Student.myName());
+
+
+             2. creation of obejct using class
+
+                class is a blueprint to create JavaScript objects 
+                class name first letter should be in Uppercase (IT rule)
+
+
+
+                example: 
+                
+                        class Person
+                                    {
+                                        constructor(firstName , lastName){
+                                        this.firstName=firstName;
+                                        this.lastName=lastName;
+                                                            }
+
+                                        fullname(){
+                                                    return this.firstName + " " +this.lastName;
+                                                   }
+                                    }
+
+                                    let Person1 = new Person(name, age);
+                                    document.write(Person1);
+                                    document.write(Person1.fullname());
+
+
+
+
+    
+            3. creation of object using constructor function
+
+                In this method without using class by just using a normal JavaScript function we can create the Objects by using new keyword
+                In a JavaScript function if we use this keyword to refer the parameter of a function then function declaration will automatically converts into class declaration
+
+
+                    example:  function chair(color, material){
+                                this.color=color;
+                                this.material=material;
+                                this.act= function(){
+                                return "Material is " + this.material;
+                                        }
+                            }
+
+                            let x = new chair("blue", "Plastic")
+                             document.write(x);
+                            document.write("Color is "+x.color);
+                            document.write(x.act());
+                             
+
+            
+            4. creation of obejct using object instance
+
+                In this method objects are created with the instanceOf a builtin JavaScript class i.e  Object
+                using new keyword with the object class these object can be created
+
+                    example:  
+                            var obj = new Object()
+                                console.log(obj);
+                                obj.name="salman";
+                                obj.age=23;
+                                obj.myfunc=function(){
+                                    return "HELLO WORLD"
+                                 }
+
+                                document.write(obj);
+                                document.write(obj.myfunc());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DOM (DOCUMENT OBJECT MODEL)
+
+        
+        DOM is an interface where we can modify html document such as changing content of the tags dynamically or applying styles using JavaScript etc..
+        DOM is abbrivated as DOCUMENT OBJECT MODEL where 
+        DOCUMENT is html file or web page 
+        OBJECT is html tags
+        MODEL is the tree like representation of html document in browser
+            refer the url for DOM structure (https://www.w3schools.com/js/pic_htmltree.gif)
+
+            
+            DOM methods to access the html tags
+
+                1. document.getElementById()
+                2. document.getElementsByClassName()
+                3. document.getElementsByTagName()
+                4. document.querySelector()
+                5. document.querySelectorAll()
+
+
+                            1. document.getElementById()
+                                
+                                It will select html tags by Id attributes
+                                It will select only one occurence of first Id
+
+                            2. document.getElementsByClassName()  
+
+                                It will select all the tags present inside class
+                                It will select all the occurence of class
+                                To modify the elements we need to use index positions
+                                It will select all the occurence of tag and return HTMLCollection []
+
+                            3. document.getElementsByTagName()
+
+                                It will select html tags by using tag name
+                                It will select all the occurence of tag and return HTMLCollection []
+
+                            4. document.querySelector()
+
+                                It will select html tags by using id,classname, getElementsByTagName
+                                It will select only one occurence that to first occurence, first occurenceof id, class and tagname
+
+                            5. document.querySelectorAll()
+
+                                It is same as querySelector method but it will select all the occurence of id, class and tagname and return NodeList []
+                                To modify the tags we need to use index positions
+                                In both querySelector and querySelectorAll methods class is represented by using dot (.) notation and id by (#) 
+                                Other it will be considered as tag
+
+
+
+        Modification of HTML tags using DOM
+
+                In JavaScript we can modify html tags by selecting them with using DOM methods like document.getElementById etc..
+                We can modify the contents of the tags, we can modify styles, add attributes etc..
+
+                    Modification of HTML tags content/text
+
+                        we use 3 DOM Properties to modify the content they are
+                        1. innerHTML
+                        2. innerText
+                        3. TextContent
+
+                        example: var x =document.getElementById("Id");
+                                        console.log(x.innerHTML);
+                                        console.log(x.innerText);
+                                        console.log(x.textContent);
+
+                                        x.textContent = "Text Content chnaged";
+                                        x.innerHTML = "Inner Html CHANGED";
+                                        x.innerText = "Inner Text is changed";
+
+
+                                        innerHTML 
+
+                                        It represents content of the tag including children and gradchildren tags of a html elements.
+
+                                        innerText
+
+                                        It represents only text written inside  a tag
+
+                                        textContent
+                                                    It is same like innerText, it represents only text written in side the tag
+
+
+        Modification of styles using DOM
+
+            To modify styles we use two Properties they are
+                1. style
+                2. cssText
+
+                    1. style 
+
+                        By using this we can apply only one css property at a time
+                        To add multiple Properties we use cssText
+
+                        example:
+                                    Variablename.style.color = "color: blue;";
+                                        b.style.color = "color: blue";
+
+                    2. cssText
+
+                        bY using this we can apply multiple css properties at once and we have to separate each property by Semicollen
+
+                        example :
+                                        Variablename.style.cssText = "color: blue; font-size: 1rem;"
+                                        b.style.cssText = "color: blue; font-size: 1rem;"
+
+
+        Setting attributes dynamically using DOM
+
+            To add attributes we use a DOM method i.e setAttributes ()
+            It will accept two arguments 
+            1st arguments attributes name and 2nd attributes value
+
+                example: Variablename.setAttribute()
+                            b.setAttribute("href", "https://www.akshay.com/");
+
+
+        
+        Working with class attributes
+
+            In JavaScript we can add css classes dynamically, to do so we use two properties they are
+                1. className
+                2. classList
+
+                    1. className 
+                        It is use to add only one class at a time
+
+                    2. classList
+                        It is use to add multiple classes 
+                        Also we can remove classes and toggle classes etc..
+                        This is having methods like add(), remove(), toggle() and contains()
+
+                            add()
+                                It is used add classes 
+                                It will accept n number of class name
+
+                                    Syntax: Variablename.classList.add(class, class2, ......)
+
+                            remove()
+                                    It is used to remove classes 
+                                        Syntax: Variablename.classList.remove(class, class2...)
+
+                            toggle()
+                                    It is used to toggle/switch the class
+                                    If the class is not present it add the class into the tag, if the class is alredy present it will remove the class from the tags
+                                        
+                                        Syntax: VariableName.classList.toggle(classname);
+
+                            contains()
+                                     It is used to identify wheather the class is present in a tag or not
+                                     It return boolean value as true or false
+
+
+
+
+
+
+
+Strings in JavaScript
+
+
+
+                        We can declare JavaScript strings in 4 Different ways
+
+                            1. double qouted strings
+
+                                Ex:
+                                    x='apple'
+                                    console.log(x);
+                                    console.log(typeof x);
+
+
+                            2. single qouted strings
+
+                                Ex:
+                                    let x="abhishek"
+                                    console.log(x);
+                                    console.log(typeof x);
+
+
+                            3. backtick string
+
+                                Ex:
+                                    x=`hi`
+                                    console.log(x);
+                                    console.log(typeof x);
+
+
+                            4. builtin string cons method
+
+                                Ex:
+                                    x=new String("hello world")
+                                    console.log(x);
+                                    console.log(typeof x) ;
+
+
+            String interpolation in JavaScript
+
+                                iT IS USED write JavaScript Variable inside the string 
+                                The Variable even after being inside a string will act as JavaScript Variables
+                                String interpolation is possible only in backtick string and used ${} operator
+                                it is used to avoid normal way of concatination of string with Variable using + operator
+
+                                example: let fname=`abhishek`;
+                                            let lname=`neelakanta`;
+                                            console.log("my name is "+fname+" "+lname);  //using concatenation
+                                            console.log(`my name is ${fname} ${fname}`);  //using string interpolation
+
+
+                            Length of string
+                            
+                                To find the Length of string we use Length property
+                                console.log("abcd".Length);
+                                output:  4
+
+
+                                    Length of the string is equal to number of characters present in a string
+
+                            Index values
+
+                                Every characters of a string will have a unique identify as index value of that character
+                                using this index values we can identify the indivials character of a string uniquely
+                                index position alsways starts from 0
+                                string character will have even negitive index value which start from -1;
+
+
+                                    Ex:
+
+                                        let fruit=`apple`
+                                        console.log(fruit[0]);
+                                        console.log(fruit[4]);
+
+                                        How to iterate the String ?
+                                        using loops.
+
+                                        let fruit=`apple`;
+                                        for(let i=0;i<fruit.length;i++){
+                                            //console.log(i);		
+                                            //console.log(fruit);
+                                            //console.log(fruit[i]);
+                                        }
+
+
+
+
+            Methods of string
+
+                                concat()
+
+                                        it used to cancatination of two or more strings
+                                        it will accept n number of args
+                                        it returns concatinated string result
+
+                                            let car="alto"
+                                            console.log(car.concat(` benz `,`audi`));
+
+
+                                charAt()
+
+                                        it is used to find the character at specified index position.
+                                        it will accept 1 argunment.
+                                        it returns character of the specified index position.
+
+                                        let flower="rose"
+                                        console.log(flower.charAt(1));
+                                        console.log(flower.charAt(3));
+
+                                charCodeAt()
+
+                                        it is used to find the ascii value of a character at aspecified index position.
+                                        it will accept 1/no argunment.
+                                        it returns Ascii value of the character specified by index position
+
+ 	                                    let vege="potato"
+ 	                                    console.log(vege.charCodeAt(1));
+
+                                indexOf()
+
+                                        it is used to find the index position of specified char in the string.
+                                        it will accept 2 argunment,but 2nd is optional(to start the search)
+                                        it returns index position of the character specified  char in the string.
+                                        if the specified char is not present then it returns -1. 
+
+	                                    let cycle="hercusless"
+	                                    console.log(cycle.indexOf(`s`,5));
+
+                                includes()
+
+                                        it is used to find weather the char is present in the String.
+                                        it accepts 2 arguments.the second one is optional.
+                                        it returns true/false.
+
+	                                    let n="vinu"
+                                        console.log(n.includes(`v`));
+
+                                split()
+                                slice()
+                                substring()
+                                replace()
+                                repeat()
+                                toUpperCase()
+                                toLowerCase()
+
+
+
+                            split()
+
+                                iT will convert a string into an arrays
+                                It will accept two arguments where first argument is a separator string 
+                                2nd secound argument is limit
+                                It will retrun an array
+
+
+
+
+
+Arrays
+
+                    Array is used to store multiple values into a Variable 
+                    JavaScript array is hetrogeneous of DataTypes becuse it can store data of any type
+                    it will not have a fixed Length, Length will be dynamic it is as per the number of elements in an array
+                    All the values or elements which are present in the array WILL have unique index values start from 0 and ends at array Length -1
+
+                    Creation of array
+
+                        We can create tthe array in two ways
+                            there are
+                            1. using builtin constructor method
+                            2. using array literals []
+
+
+                            1. builtin constructor method
+
+                            example: let arr1 = new Array('apple', 'bannabna', 'orange')
+                            console.log(arr);
+                            console.log(typeof arr1);
+
+
+                            2. Using array literals method []:
+  
+                                Example:
+
+                                let arr=[1,2.5,`a`,`abhi`,true]
+                                console.log(arr);
+                                console.log(typeof arr);.
+
+
+
+
+
+Length of an Array:
+-------------------
+
+To get the length of array we use inbuilt length property.
+
+Example:
+	console.log(arr.length);
+
+Index Values:
+-------------
+	All the array elements  will have unique index values by using those unique index values we can identify the elements uniquely,
+	Index Values starts from 0 and ends at Length-1.
+
+Example:
+
+console.log(arr[0]);
+console.log(arr[3]);
+console.log(arr[4]);
+
+
+
+
+Iteration Of arrays using for loop:
+----------------------------------
+	
+
+Example:
+	for (let i=0;i<=arr.length-1;i++){
+      console.log(arr[i]);
+}
+
+
+
+
+
+Array Methods:(*---> important)
+--------------
+1. Concat()
+2. indexOf()
+3. includes()
+4. slice()
+5. splice()
+6. push()
+7. pop()
+8. shift()
+9. unshift()
+10.reverse():
+11.fill():
+12.join():
+*13.forEach():
+*14.map():
+*15.filter():
+*16.reduce():
+*17.sort():
+
+                            1.Concat():
+                            	            It is used to concatenate 2 or more arrays.It will accecpt 'n' number of argunments.
+                                            It will return a new concatenated array without affecting hte original array.
+	
+                                            Example:
+
+                                            let odds =[1,3,5,7]
+                                            let evens=[2,4,6,8]
+                                            console.log(odds.concat(odds,evens,[`a`,`b`,`c`]));
+
+
+
+                            2.IndexOf():
+                            	            It is used to find out the index position of an array element, it will accecpt 2 argunments, 2nd argunment is optional.
+                            	            If the element is not found it returns -1.
+
+                                            syntax:
+
+                                            array.indexOf(`array element`, index position(optional))
+
+                                            Example:
+                                            console.log(odds.indexOf(3));
+                                            console.log(evens.indexOf(4));
+ 
+
+                            3.includes():
+                            	            It is used to identify weather the element is present in the array/not.
+                            	            It returns boolean value.
+                            	            If the element is present it returns true, if not false.
+	                                        It accecpts 2 argunments, 2nd argunment is optional.
+
+                                             syntax:
+	                                        array.includes(`array element`, index position(optional))
+
+                                            Example:
+	                                            console.log(odds.includes(2));
+                                                console.log(odds.includes(7,1));
+
+
+
+                             4.slice():
+	                                        It is same as String Slice method, where based on the index positions an array will be sliced and it returns a new array.
+	                                        without affecting the original array.
+
+                                            Example:
+	                                        console.log(evens.slice(3));
+ 	                                        console.log(evens.slice(1,-1));
+ 	                                        console.log(evens.slice(1,3));
+
+                            5.splice():
+		                                    It Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+		                                    It accepts 3 number of argunments(start: number, deleteCount: number, ...items: string[]) the 3rd is optional.
+                                             Example:
+
+                                             let subj=[`engish`,`kannada`,`science`,`social`];
+                                             console.log(subj);
+                                             console.log(subj.splice(1,1,`hindi`,`kannada`,`maths`));
+                                             console.log(subj);
+	
+
+	
+                            6.push():
+	                                        It is used to add elements to the end of the array, it will accecpt n number of argunments, it will affect the original array.
+	                                         It returns the updated array length.
+
+                                             Example:
+
+                                             let car=[`audi`,`benz`,`maruthi`,`swift`];
+                                             console.log(car);
+                                             car.push(`santro`,`zen`)
+                                             console.log(car);
+	
+
+                            7.pop():
+	                                        It is used to remove/delete one last element from the array,
+	                                        It will not accecpt any argunments.
+	                                        It will return the removed element.
+	                                        iF u need only the last element go for pop()
+
+	                                        Example:
+
+	                                        car.pop()
+	                                        console.log(car);
+	                                        car.pop()
+	                                        console.log(car);
+	
+	
+
+                            8.shift():
+	                                        It will remove/delete first element from the begining of the array.
+	                                        It alters the array.
+	                                        It will not accecpt any argunments.
+	                                        If u need only the first element go for shift().
+
+                                             Example:
+	                                        car.shift()
+	                                        console.log(car);
+
+
+                            9.unshift():
+	                                        It is used to add elements from the starting an array, it accecpts n number of argunmets.
+	                                        It returns updated array length.
+	                                        It will affect the original array.
+
+                                            Example:
+                                            car.unshift(`zen`,`santro`) 
+                                            console.log(car);
+
+
+                            10.reverse():
+
+	                                        It is used to reverse the array elements.
+	                                        It will not accecpt any argunmets.
+	                                        It will Affect/Modify original Array.
+
+                                            Example:
+	                                        let rev=[`java script` ,`is` ,` easy` ,` peasy`];
+	                                        console.log(rev.reverse());
+	
+
+
+                            11.fill():
+	                                        It is used to fill the array with given value .
+	                                        It accecpts 3 Argunments, second n third Argunment is optional.
+	                                        It will modify original array.
+	
+                                            Synatax:
+
+                                            Array.fill('element',  start index, end index)
+
+                                            Example:
+                                            let num=[10,20,30,40,50]
+                                            console.log(num);
+                                            num.fill(11,1,3)
+                                            console.log(num);
+
+
+
+                            12. Join()
+
+                                            It is used to convert array
+                                            it accepts a serepartor string as the argument
+                                            it will not modify original array, it returns a string 
+
+                                            example: let cars = ["polo", "santro", "audi"]
+                                            console.log(cars);
+                                            console.log(cars.join(""));
+                                            console.log(cars.join("*"));
+
+
+
+                            13. forEach()
+
+                                            It is used to perform common operation on all the array elements
+                                            forEach method will accepts a function as the argument 
+                                            It will not modify original array, It will perform the common operation on elements
+                                            It will return undefined
+
+                                            Syntax: array.forEach(function (argument){
+                                                set of code
+                                            })
+
+                                            example:
+                                            let nu= cars.forEach(function(temp){
+                                               console.log(temp+ "is a car");
+                                            })
+
+                                            cars.forEach(function(temp)=>{
+                                               console.log(temp+10);
+                                            })
+
+
+                            14. map()
+                                            It is used to perform common operation on all the array elements
+                                            It will retrun a new array of modify elements
+                                            It accept a function as the argument
+
+                                            example: let num=[1,2,3,4]
+                                                       let res = num.map(temp=>{
+                                                           retrun temp+10;
+                                                       })
+                                                       console.log(res);
+
+
+
+                            15. filter()
+
+                                                It is used to filter the array elements based on the Condition
+                                                It retruns a new array of filtered elements
+                                                It accept a function as the argument
+
+                                                example: res = num.filter((temp)=>{
+                                                   retrun temp%2 === 0;
+                                                })
+                                                console.log(res); // [2,4]
+
+
+                            16. reduce()
+                                             It is used to reduce the array into a single value such as sum of array, product of array etc.
+                                             It will accept a function as the argument and retrun a single value.
+
+                                                Syntax: array.reduce(function(currentvalue, nextvalue)=>{
+                                                 return currentvalue+nextvalue;
+                                             })
+                                             console.log(res); //1+2=3, 3+3=6
+
+
+                            17. Sort()
+
+                                             It is used to sort the array in ascending or descending order
+                                             By default it will sort the elements in ascending of ascii value
+                                             It will modify the orginal array
+                    
+                                             Syntax: array.sort(function(a,b){
+                                                 Statment
+                                             })
+
+                                             example: let num=[1,200,2,1000,3]
+                                             console.log(num);
+                                                 let x=num.sort(function(a,b){
+                                                retrun a-b;
+                                                    })
+                                                console.log(x);
+
+
+
+                Interview Questions
+
+                What are function and Types of function?
+                What is the difference between Annonymous and Arrow function
+                What is the difference a General or Named function and Annonymous function
+                Whta is Hoisting and it's Types ?
+                Whta is difference between function declaration and function expression
+                Whta are object in JavaScript
+                How to create objects in JavaScript
+                What is this keyword
+                Whta is Inheritence
+                What is DOM
+                what are the method to access the DOM elements
+                What is difference between getElementById and querySelector
+                What is the difference querySelector and querySelectorAll
+                difference between innerHTML and innerText
+                What is the difference slice and substring method
+                Write a program to reverse the string without using builtin method
+                WAP to find the string is palendrone or not
+
+                What are the featres or JavaScript array
+                Write a program to iterate the array
+                What is push, shift, unshift, slice, splice, forEach,map,filter,reduce and sort
+                What is the difference between slice and splice
+                
+
+
+
+
+ popup-boxex
+
+ there are 3 builtin JavaScript Methods to create boxex on the webpage they are
+ 1. alert()
+ 2. prompt()
+ 3. confirm() 
+
+ 1. alert()
+    It is used to display a popup box or window to show a message for the user
+    It will be having one OK button in the popup window
+    example:
+            alert("Hi I'mn Akshay");
+    alert method will accecpt only one argument as a string 
+
+
+
+2.confirm()
+   It is used to create a popup window to get confirmation of the user
+   It will be hav two button OK & CANCEL 
+   It will retrun a boolean value, when the user click on OK it retrun true, CANCEL it retrun false
+   It will accecpt one argument as a string
+
+   example: let confrimation = confirm("Are u sure?");
+                console.log(confirmation);
+
+
+
+3. prompt()
+    IT IS USEE To create a popup window to accecpt the user inputs
+    It retruns a string, It will be having two buttons OK & CANCEL, if the user click OK it return the user inputs, CANCEL it retrun null
+
+    example: let x = prompt("Enter the NAME");
+            console.log(typeof x);
+            console.log(x);
+
+            let y = number(prompt("Enter only number"));
+                console.log(y);
+
+
+
+
+
+
+EVENT HANDLING 
+
+Using Js we can handle the browser actions such as clicking on a button, loading a webpage, typing something in the input field etc.
+JS Events helps us to handle the actions dynamically on the browser.
+There are many events in JS. they are:
+1.click.
+Example:
+	let y=document.getElementById('datebtn')
+	y.addEventListener(`click`,()=>{
+    	let date=new Date()
+    	alert( `Today's date is ${date.toLocaleDateString()}`)
+})
+
+2.dblclick. 
+3.mouseover.
+4.mouseout.
+5.focus.
+6.blur.
+7.Keyup.
+8.Keydown.
+9.submit.
+
+To handle the events in JS we use functions and those functions will execute when any event occurs on the webpage.
+To call the functions based on the event occurs we use addEventListener method/we use attributes like onlick , ondblclick etc in the html tag.
+
+addEventListener():
+------------------
+It is a built in JS method taht accecpts 2 argunments (event,function, that executes when the respective event occurs on the web page.)
+
+Example:
+	let y=document.getElementById('datebtn')
+	y.addEventListener(`click`,()=>{
+    	let date=new Date()
+    	alert( `Today's date is ${date.toLocaleDateString()}`)
+})
+
+
+
+
+
+Date and Math Objects:
+---------------------
+
+By using date constructor method we can get the current date and time in JS.
+Date is a Built in Constructor method, Using that we need to create object of date with the help of New Keyword.
+From the date object we can access Date, Day, month and we can also access some time related values such as hours, minutes, seconds etc.
+
+Date Object Methods:
+
+
+//methods to access the date elements
+
+console.log(`Todays date is${y.get.Date}`);
+console.log(y.getDate());
+console.log(y.getDay());
+console.log(y.getFullYear());
+console.log(y.toLocaleDateString());
+console.log(y.getMonth());
+
+
+//methods to access the time elements
+
+console.log(y.getHours());
+console.log(y.getMinutes());
+console.log(y.getSeconds());
+console.log(y.toLocaleTimeString());
+console.log(y.getMilliseconds());
+
+
+outputs:
+--------
+
+4 Wed Dec 28 2022 11:39:47 GMT+0530 (India Standard Time)
+5 Todays date is28
+6 28
+7 3
+8 2022
+9 12/28/2022
+10 11
+13 11
+14 39
+15 47
+16 11:39:47 AM
+17 226
+
+
+Math Object:
+-----------
+It is an intrinsic JS object, It is used to perform operations such as finding sqrt,cubrt, etc
+
+
+
+let a=Math
+console.log(a);
+
+console.log(a.E);
+console.log(a.PI);
+console.log(Math.sqrt(25));
+console.log(Math.cbrt(75));
+console.log(Math.max(1,100,10,-5));
+console.log(Math.min(1,100,10,-5));
+console.log(Math.round(4.5));
+console.log(Math.round(4.05));
+console.log(Math.trunc(82.23454));
+console.log(Math.floor(82.23454));
+console.log(Math.ceil(82.23454));
+console.log(Math.pow(4,2));
+console.log(a.pow(5,2));
+
+
+output:
+------
+
+2.718281828459045
+3.141592653589793
+5
+4.2171633265087465
+100
+-5
+5
+4
+82
+82
+83
+16
+25
+
+
+
+
+
+Validations
+
+Validations is nothing but validating the form to accept a specific values and to throw the errors for the user if the user is not matching the pattern while filling the form.
+There are multiple kinds of Validations such as: 
+
+1. Empty space Validations
+2. Password and confirm Password Validations
+3. Mobile number validation 
+4. E-mail id validation
+
+
+It is a JavaScript builtin object, it is used to create patterns to validate html forms.
+Regular expresssion can be created by using a builtin constructor method or regular expression literal( // )
+
+example: let reg = new reg(pattern)
+
+or 
+
+let reg = / patterns /
+
+
+
+2. Password and confirm Password Validations
+
+
+
+Inheritence
+
+It is the process of acquring or accessing the properties of one class into another class
+
+class
+It is blueprint to create JavaScript object we use class keyword to create classses in JavaScript
+
+Naming convention for class 
+First letter Uppercase 
+
+Example: class Car
+
+Constructor
+
+It is a method used inside the class to inject the properties of object
+We use constructor keyword to create constructor method
+
+Extends
+
+It we help as in relating beteween the class to access the properties of a class into another
+
+Super Constructor method
+
+It is used to bring the constructor method of a parent class into a child class 
+Super method should be used inside the constructor method of a child class before refeing the properties of a constructor method
+
+If we use outside of a c;ass or a method it WILL refer to the global object (Window)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+    It is a builtin in method which accecpt two argument, 1st argument is event, 2nd argument is a function that executes when the respective event occors on the web page
